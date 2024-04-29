@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-app
+  title: python-app
+  description: Hello World python application using Docker image
+  annotations:
+    github.com/project-slug: janani01/python-app
+spec:
+  type: service
+  lifecycle: production
+  owner: user:janani01
+  dependencies:
+  containers:
+    - name: python-app
+      image: python-app:latest
+      ports:
+        - port: 8080
